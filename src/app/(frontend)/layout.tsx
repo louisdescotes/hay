@@ -1,17 +1,19 @@
 import React from 'react'
+import '@blossom-carousel/react/style.css'
+import { generalSans } from '@/fonts/general-sans'
 import './styles.css'
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+  description: 'HAY',
+  title: 'HAY',
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={generalSans.variable}>
+      <body className={generalSans.className}>
         <main>{children}</main>
       </body>
     </html>

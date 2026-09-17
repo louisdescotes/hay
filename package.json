@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "hay",
   "version": "1.0.0",
-  "description": "A blank template to get started with Payload 3.0",
+  "description": "HAY — Payload CMS + Next.js",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -18,18 +18,23 @@
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts"
   },
   "dependencies": {
+    "@blossom-carousel/react": "^1.5.2",
+    "@payloadcms/db-mongodb": "3.89.0",
     "@payloadcms/next": "3.89.0",
     "@payloadcms/richtext-lexical": "3.89.0",
     "@payloadcms/ui": "3.89.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "cross-env": "^7.0.3",
     "dotenv": "16.4.7",
     "graphql": "^16.8.1",
+    "motion": "^13.4.0",
     "next": "16.3.3",
     "payload": "3.89.0",
+    "postcss": "^8.5.28",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "sharp": "0.35.4",
-    "@payloadcms/db-mongodb": "3.89.0"
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@playwright/test": "1.58.2",

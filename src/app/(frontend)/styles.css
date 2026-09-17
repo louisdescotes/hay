@@ -1,5 +1,32 @@
-:root {
-  --font-mono: 'Roboto Mono', monospace;
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-general-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #07001c;
+  --color-muted: #49484e;
+  --color-subtle: #bbbabf;
+  --color-canvas: #e8e8e8;
+  --color-surface: #ffffff;
+  --color-ink-65: rgb(7 0 28 / 0.65);
+
+  --text-xs: 14px;
+  --text-xs--line-height: 1.5;
+  --text-sm: 16px;
+  --text-sm--line-height: 1.5;
+  --text-base: 18px;
+  --text-base--line-height: 1.5;
+  --text-lg: 20px;
+  --text-lg--line-height: 1.2;
+  --text-xl: 24px;
+  --text-xl--line-height: 1.15;
+  --text-2xl: 32px;
+  --text-2xl--line-height: 1.15;
+
+  --tracking-tight: -0.02em;
+  --tracking-caption: 0.02em;
+
+  --radius-hay: 8px;
 }
 
 * {
@@ -7,10 +34,6 @@
 }
 
 html {
-  font-size: 18px;
-  line-height: 32px;
-
-  background: rgb(0, 0, 0);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -21,54 +44,13 @@ body,
 }
 
 body {
-  font-family: system-ui;
-  font-size: 18px;
-  line-height: 32px;
-
-  margin: 0;
-  color: rgb(1000, 1000, 1000);
-
-  @media (max-width: 1024px) {
-    font-size: 15px;
-    line-height: 24px;
-  }
+  @apply m-0 bg-canvas font-sans text-base text-ink antialiased;
 }
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-h1 {
-  margin: 40px 0;
-  font-size: 64px;
-  line-height: 70px;
-  font-weight: bold;
-
-  @media (max-width: 1024px) {
-    margin: 24px 0;
-    font-size: 42px;
-    line-height: 42px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 38px;
-    line-height: 38px;
-  }
-
-  @media (max-width: 400px) {
-    font-size: 32px;
-    line-height: 32px;
-  }
-}
-
-p {
-  margin: 24px 0;
-
-  @media (max-width: 1024px) {
-    margin: calc(var(--base) * 0.75) 0;
-  }
 }
 
 a {
@@ -113,6 +95,7 @@ svg {
 
     h1 {
       text-align: center;
+      @apply text-2xl font-semibold tracking-tight;
     }
   }
 
@@ -124,19 +107,15 @@ svg {
     a {
       text-decoration: none;
       padding: 0.25rem 0.5rem;
-      border-radius: 4px;
+      @apply rounded-hay;
     }
 
     .admin {
-      color: rgb(0, 0, 0);
-      background: rgb(1000, 1000, 1000);
-      border: 1px solid rgb(0, 0, 0);
+      @apply border border-ink bg-surface text-ink;
     }
 
     .docs {
-      color: rgb(1000, 1000, 1000);
-      background: rgb(0, 0, 0);
-      border: 1px solid rgb(1000, 1000, 1000);
+      @apply border border-ink bg-ink text-surface;
     }
   }
 
@@ -152,13 +131,13 @@ svg {
 
     p {
       margin: 0;
+      @apply text-sm text-muted;
     }
 
     .codeLink {
       text-decoration: none;
       padding: 0 0.5rem;
-      background: rgb(60, 60, 60);
-      border-radius: 4px;
+      @apply rounded-hay bg-subtle text-ink;
     }
   }
 }
