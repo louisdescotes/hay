@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <HomeHero />
-      <div className="flex flex-col gap-20 bg-canvas pb-8 pt-16 md:gap-[80px] md:pt-20">
+      <div className="flex flex-col gap-24 bg-canvas pb-8 pt-24 md:gap-40 md:pt-40">
         <ObjectsSection />
         <DesignersSection />
         <AboutSection />

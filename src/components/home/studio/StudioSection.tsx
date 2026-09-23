@@ -13,10 +13,10 @@ const COLUMN_RIGHT =
 
 export default function StudioSection() {
   return (
-    <SiteContainer as="section" className="flex flex-col gap-12">
+    <SiteContainer as="section" className="flex flex-col gap-20">
       <TextReveal
         as="h2"
-        className="w-full text-hero font-medium tracking-tight text-ink text-balance"
+        className="w-full text-[64px] font-medium leading-[1.15] tracking-tight text-ink text-balance"
       >
         Le Studio
       </TextReveal>
@@ -28,7 +28,7 @@ export default function StudioSection() {
           <TextReveal
             as="p"
             delay={80}
-            className="text-2xl font-normal tracking-tight text-ink leading-[1.35] text-pretty"
+            className="text-xl font-normal tracking-tight text-ink leading-[1.35] text-pretty"
             firstLineClassName="indent-[min(117px,8vw)]"
           >
             {LEAD}

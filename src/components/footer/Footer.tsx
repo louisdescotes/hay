@@ -4,7 +4,7 @@ import SiteContainer from '@/components/ui/SiteContainer'
 
 export default function Footer() {
   return (
-    <footer className="pb-12 pt-20">
+    <footer className="pb-12">
       <SiteContainer className="flex flex-col gap-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
           <div className="flex flex-col gap-1.5">
